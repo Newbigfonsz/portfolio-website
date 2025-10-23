@@ -1,37 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Gallery | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+</head>
+<body>
+
+<!-- Navigation Bar (copy from your index.html for consistency) -->
+<div class="w3-bar w3-blue">
+  <a href="index.html" class="w3-bar-item w3-button w3-mobile">Home</a>
+  <a href="about.html" class="w3-bar-item w3-button w3-mobile">About</a>
+  <a href="gallery.html" class="w3-bar-item w3-button w3-mobile">Gallery</a>
+  <a href="contact.html" class="w3-bar-item w3-button w3-mobile">Contact</a>
+  <a href="javascript:void(0);" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="toggleMenu()">☰</a>
+</div>
+<div id="mobileMenu" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium">
+  <a href="index.html" class="w3-bar-item w3-button">Home</a>
+  <a href="about.html" class="w3-bar-item w3-button">About</a>
+  <a href="gallery.html" class="w3-bar-item w3-button">Gallery</a>
+  <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+</div>
+
+<!-- Gallery Grid -->
 <div class="w3-content w3-padding" style="max-width:1200px">
   <h2 class="w3-center">Gallery</h2>
   <div class="w3-row-padding">
     <div class="w3-col s6 m4 l3">
-      <img src="https://picsum.photos/200/150?random=1" class="w3-image w3-hover-opacity" onclick="openModal(this)" alt="Gallery image 1" style="cursor:pointer">
+      <img src="https://picsum.photos/200/150?random=1" class="w3-image w3-hover-opacity" onclick="openModal(this)" alt="Gallery image 1" style="cursor:pointer" />
     </div>
     <div class="w3-col s6 m4 l3">
-      <img src="https://picsum.photos/200/150?random=2" class="w3-image w3-hover-opacity" onclick="openModal(this)" alt="Gallery image 2" style="cursor:pointer">
+      <img src="https://picsum.photos/200/150?random=2" class="w3-image w3-hover-opacity" onclick="openModal(this)" alt="Gallery image 2" style="cursor:pointer" />
     </div>
     <div class="w3-col s6 m4 l3">
-      <img src="https://picsum.photos/200/150?random=3" class="w3-image w3-hover-opacity" onclick="openModal(this)" alt="Gallery image 3" style="cursor:pointer">
+      <img src="https://picsum.photos/200/150?random=3" class="w3-image w3-hover-opacity" onclick="openModal(this)" alt="Gallery image 3" style="cursor:pointer" />
     </div>
     <div class="w3-col s6 m4 l3">
-      <img src="https://picsum.photos/200/150?random=4" class="w3-image w3-hover-opacity" onclick="openModal(this)" alt="Gallery image 4" style="cursor:pointer">
+      <img src="https://picsum.photos/200/150?random=4" class="w3-image w3-hover-opacity" onclick="openModal(this)" alt="Gallery image 4" style="cursor:pointer" />
     </div>
     <div class="w3-col s6 m4 l3">
-      <img src="https://picsum.photos/200/150?random=5" class="w3-image w3-hover-opacity" onclick="openModal(this)" alt="Gallery image 5" style="cursor:pointer">
+      <img src="https://picsum.photos/200/150?random=5" class="w3-image w3-hover-opacity" onclick="openModal(this)" alt="Gallery image 5" style="cursor:pointer" />
     </div>
     <div class="w3-col s6 m4 l3">
-      <img src="https://picsum.photos/200/150?random=6" class="w3-image w3-hover-opacity" onclick="openModal(this)" alt="Gallery image 6" style="cursor:pointer">
+      <img src="https://picsum.photos/200/150?random=6" class="w3-image w3-hover-opacity" onclick="openModal(this)" alt="Gallery image 6" style="cursor:pointer" />
     </div>
     <div class="w3-col s6 m4 l3">
-      <img src="https://picsum.photos/200/150?random=7" class="w3-image w3-hover-opacity" onclick="openModal(this)" alt="Gallery image 7" style="cursor:pointer">
+      <img src="https://picsum.photos/200/150?random=7" class="w3-image w3-hover-opacity" onclick="openModal(this)" alt="Gallery image 7" style="cursor:pointer" />
     </div>
     <div class="w3-col s6 m4 l3">
-      <img src="https://picsum.photos/200/150?random=8" class="w3-image w3-hover-opacity" onclick="openModal(this)" alt="Gallery image 8" style="cursor:pointer">
+      <img src="https://picsum.photos/200/150?random=8" class="w3-image w3-hover-opacity" onclick="openModal(this)" alt="Gallery image 8" style="cursor:pointer" />
     </div>
   </div>
 </div>
-<!-- Lightbox Modal, unchanged -->
+
+<!-- Lightbox Modal -->
 <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
   <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
   <div class="w3-modal-content w3-animate-zoom">
-    <img id="img01" style="width:100%">
+    <img id="img01" style="width:100%" />
   </div>
 </div>
 <script>
@@ -39,8 +66,20 @@ function openModal(img) {
   document.getElementById("modal01").style.display = "block";
   document.getElementById("img01").src = img.src;
 }
+function toggleMenu() {
+  var x = document.getElementById("mobileMenu");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
 </script>
+
+<!-- Footer -->
 <footer class="w3-container w3-blue w3-center w3-margin-top">
   <p>&copy; 2025 Alphonzo Jones Jr. | Portfolio Demo</p>
 </footer>
 
+</body>
+</html>
